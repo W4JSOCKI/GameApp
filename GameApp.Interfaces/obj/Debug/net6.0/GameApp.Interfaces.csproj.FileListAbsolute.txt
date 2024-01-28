@@ -1,0 +1,15 @@
+C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\obj\Debug\net6.0\GameApp.Interfaces.csproj.AssemblyReference.cache
+C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\obj\Debug\net6.0\GameApp.Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\obj\Debug\net6.0\GameApp.Interfaces.AssemblyInfoInputs.cache
+C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\obj\Debug\net6.0\GameApp.Interfaces.AssemblyInfo.cs
+C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\obj\Debug\net6.0\GameApp.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\bin\Debug\net6.0\GameApp.Interfaces.deps.json
+C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\bin\Debug\net6.0\GameApp.Interfaces.dll
+C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\bin\Debug\net6.0\GameApp.Interfaces.pdb
+C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\bin\Debug\net6.0\GameApp.Core.dll
+C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\bin\Debug\net6.0\GameApp.Core.pdb
+C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\obj\Debug\net6.0\GameApp.Interfaces.csproj.CopyComplete
+C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\obj\Debug\net6.0\GameApp.Interfaces.dll
+C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\obj\Debug\net6.0\refint\GameApp.Interfaces.dll
+C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\obj\Debug\net6.0\GameApp.Interfaces.pdb
+C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\obj\Debug\net6.0\ref\GameApp.Interfaces.dll

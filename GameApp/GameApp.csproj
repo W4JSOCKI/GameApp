@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GameApp.BLC\GameApp.BLC.csproj" />
+    <ProjectReference Include="..\GameApp.Core\GameApp.Core.csproj" />
+    <ProjectReference Include="..\GameApp.Interfaces\GameApp.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

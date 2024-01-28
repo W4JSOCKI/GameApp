@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "GameApp.DAOMock1/1.0.0": {
+        "dependencies": {
+          "GameApp.Core": "1.0.0",
+          "GameApp.Interfaces": "1.0.0"
+        },
+        "runtime": {
+          "GameApp.DAOMock1.dll": {}
+        }
+      },
+      "GameApp.Core/1.0.0": {
+        "runtime": {
+          "GameApp.Core.dll": {}
+        }
+      },
+      "GameApp.Interfaces/1.0.0": {
+        "dependencies": {
+          "GameApp.Core": "1.0.0"
+        },
+        "runtime": {
+          "GameApp.Interfaces.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GameApp.DAOMock1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameApp.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameApp.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

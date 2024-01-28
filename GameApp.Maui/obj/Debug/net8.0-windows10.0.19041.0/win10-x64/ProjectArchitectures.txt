@@ -1,0 +1,1 @@
+C:\Users\patry\source\repos\GameApp\GameApp.Maui\GameApp.Maui.csproj;x64

@@ -1,0 +1,1 @@
+C:\Users\patry\source\repos\GameApp\CarsAppMAUI\CarsAppMAUI.csproj;x64

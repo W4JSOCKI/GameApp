@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "GameApp.Interfaces/1.0.0": {
+        "dependencies": {
+          "GameApp.Core": "1.0.0"
+        },
+        "runtime": {
+          "GameApp.Interfaces.dll": {}
+        }
+      },
+      "GameApp.Core/1.0.0": {
+        "runtime": {
+          "GameApp.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GameApp.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameApp.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
