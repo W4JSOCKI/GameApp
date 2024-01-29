@@ -16,3 +16,4 @@ C:\Users\patry\source\repos\GameApp\GameApp.BLC\obj\Debug\net6.0\refint\GameApp.
 C:\Users\patry\source\repos\GameApp\GameApp.BLC\obj\Debug\net6.0\GameApp.BLC.pdb
 C:\Users\patry\source\repos\GameApp\GameApp.BLC\obj\Debug\net6.0\ref\GameApp.BLC.dll
 C:\Users\patry\source\repos\GameApp\GameApp.BLC\bin\Debug\net6.0\GameApp.BLC.dll.config
+C:\Users\patry\source\repos\GameApp\GameApp.BLC\obj\Debug\net6.0\GameApp.BLC.sourcelink.json

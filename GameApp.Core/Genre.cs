@@ -1,4 +1,4 @@
-﻿namespace Wojtalak_Szczerkowski.GameApp.Core
+﻿namespace GameApp.Core
 {
     public enum Genre
     {

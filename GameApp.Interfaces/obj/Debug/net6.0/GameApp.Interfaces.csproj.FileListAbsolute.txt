@@ -13,3 +13,4 @@ C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\obj\Debug\net6.0\GameApp.
 C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\obj\Debug\net6.0\refint\GameApp.Interfaces.dll
 C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\obj\Debug\net6.0\GameApp.Interfaces.pdb
 C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\obj\Debug\net6.0\ref\GameApp.Interfaces.dll
+C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\obj\Debug\net6.0\GameApp.Interfaces.sourcelink.json

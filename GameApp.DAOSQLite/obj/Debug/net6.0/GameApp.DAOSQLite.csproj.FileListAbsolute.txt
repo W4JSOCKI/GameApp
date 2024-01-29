@@ -17,3 +17,4 @@ C:\Users\patry\source\repos\GameApp\GameApp.DAOSQLite\obj\Debug\net6.0\refint\Ga
 C:\Users\patry\source\repos\GameApp\GameApp.DAOSQLite\obj\Debug\net6.0\GameApp.DAOSQLite.pdb
 C:\Users\patry\source\repos\GameApp\GameApp.DAOSQLite\obj\Debug\net6.0\GameApp.DAOSQLite.genruntimeconfig.cache
 C:\Users\patry\source\repos\GameApp\GameApp.DAOSQLite\obj\Debug\net6.0\ref\GameApp.DAOSQLite.dll
+C:\Users\patry\source\repos\GameApp\GameApp.DAOSQLite\obj\Debug\net6.0\GameApp.DAOSQLite.sourcelink.json

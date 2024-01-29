@@ -9,3 +9,4 @@ C:\Users\patry\source\repos\GameApp\GameApp.Core\obj\Debug\net6.0\GameApp.Core.d
 C:\Users\patry\source\repos\GameApp\GameApp.Core\obj\Debug\net6.0\refint\GameApp.Core.dll
 C:\Users\patry\source\repos\GameApp\GameApp.Core\obj\Debug\net6.0\GameApp.Core.pdb
 C:\Users\patry\source\repos\GameApp\GameApp.Core\obj\Debug\net6.0\ref\GameApp.Core.dll
+C:\Users\patry\source\repos\GameApp\GameApp.Core\obj\Debug\net6.0\GameApp.Core.sourcelink.json

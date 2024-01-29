@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameAppMAUI.DeveloperEditPage"
+             Title="DeveloperEditPage">
+    <VerticalStackLayout>
+        <Grid Margin="0, 30" RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,Auto" BindingContext="{Binding DeveloperEdit}">
+
+            <Label Grid.Row="1" Grid.Column="0" Text="Name"/>
+            <Entry Grid.Row="1" Grid.Column="1" Text="{Binding Name}"/>
+
+            <Label Grid.Row="2" Grid.Column="0" Text="Country"/>
+            <Entry Grid.Row="2" Grid.Column="1" Text="{Binding Country}"/>
+
+        </Grid>
+
+        <HorizontalStackLayout>
+            <Button Text="Save" Command="{Binding SaveDeveloperCommand}"></Button>
+            <Button Text="Cancel" Command="{Binding CancelCommand}"></Button>
+            <Button Text="Delete" Command="{Binding DeleteProducerCommand}"></Button>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

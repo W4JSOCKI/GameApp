@@ -15,3 +15,4 @@ C:\Users\patry\source\repos\GameApp\GameApp.DAOMock1\obj\Debug\net6.0\GameApp.DA
 C:\Users\patry\source\repos\GameApp\GameApp.DAOMock1\obj\Debug\net6.0\refint\GameApp.DAOMock1.dll
 C:\Users\patry\source\repos\GameApp\GameApp.DAOMock1\obj\Debug\net6.0\GameApp.DAOMock1.pdb
 C:\Users\patry\source\repos\GameApp\GameApp.DAOMock1\obj\Debug\net6.0\ref\GameApp.DAOMock1.dll
+C:\Users\patry\source\repos\GameApp\GameApp.DAOMock1\obj\Debug\net6.0\GameApp.DAOMock1.sourcelink.json

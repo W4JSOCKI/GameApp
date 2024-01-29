@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameAppMAUI.DevelopersPage"
+             Title="DevelopersPage">
+    <VerticalStackLayout>
+        <Button Text="Add new developer" Command="{Binding CreateNewDeveloperCommand}" />
+		<ListView ItemsSource="{Binding Developers}" ItemTapped="OnSelectedDeveloper" >
+            <ListView.Header>
+                <Grid Padding="10" ColumnSpacing="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="300"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="ID" Grid.Column="0" HorizontalOptions="Start" FontAttributes="Bold"/>
+                    <Label Text="Name" Grid.Column="1" HorizontalOptions="Start" FontAttributes="Bold"/>
+                    <Label Text="Country" Grid.Column="2" HorizontalOptions="Start" FontAttributes="Bold"/>
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10" ColumnSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="300"/>
+                                <ColumnDefinition Width="300"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Id}" Grid.Column="0" HorizontalOptions="Start"/>
+                            <Label Text="{Binding Name}" Grid.Column="1" HorizontalOptions="Start"/>
+                            <Label Text="{Binding Country}" Grid.Column="2" HorizontalOptions="Start"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+		</ListView>
+	</VerticalStackLayout>
+</ContentPage>

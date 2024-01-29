@@ -1,4 +1,4 @@
-﻿using Wojtalak_Szczerkowski.GameApp.Core;
+﻿using GameApp.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,17 +18,5 @@ namespace Wojtalak_Szczerkowski.GameApp.Interfaces
 
         public Genre Gen { get; set; }
 
-        IGame CopyFrom(IGame game)
-        {
-            Id = game.Id;
-            Rank = game.Rank;
-            Title = game.Title;
-            Platform = game.Platform;
-            ReleaseYear = game.ReleaseYear;
-            Developer = game.Developer;
-            ReleaseYear = game.ReleaseYear;
-            Gen = game.Gen;
-            return this;
-        }
     }
 }

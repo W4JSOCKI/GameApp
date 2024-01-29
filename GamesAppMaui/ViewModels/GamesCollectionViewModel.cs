@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Wojtalak_Szczerkowski.GameApp.BLC;
-using Wojtalak_Szczerkowski.GameApp.Core;
+using GameApp.Core;
 using CommunityToolkit.Mvvm.Input;
 using System.Threading.Tasks;
 using Wojtalak_Szczerkowski.GameApp.Interfaces;
@@ -114,8 +114,10 @@ namespace GamesAppMaui.ViewModels
 
         [RelayCommand(CanExecute =nameof(CanEditGameBeSaved))]
         private void SaveGame()
-        {
-            IGame dgame = blc.GetGame(game.Id);
+        {   
+            games.Add(gameEdit);
+            IGame game = gameEdit;
+            blc.AddGame(game);
             GameEdit.PropertyChanged -= OnGameEditPropertyChanged;
             GameEdit = null;
             IsEditing = false;

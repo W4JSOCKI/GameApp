@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-using Wojtalak_Szczerkowski.GameApp.Core;
+using GameApp.Core;
 using Wojtalak_Szczerkowski.GameApp.Interfaces;
 
 namespace Wojtalak_Szczerkowski.GameApp.DAOSQLite.BO
@@ -15,18 +15,7 @@ namespace Wojtalak_Szczerkowski.GameApp.DAOSQLite.BO
 
         public Developer _developer { get; set; }
 
-        [NotMapped]
-        public IDeveloper Developer
-        {
-            get
-            {
-                return _developer;
-            }
-            set
-            {
-                _developer = value as Developer;
-            }
-        }
+        IDeveloper IGame.Developer { get { return _developer; } set { _developer = (BO.Developer)value; } }
 
     }
 }

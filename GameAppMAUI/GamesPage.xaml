@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameAppMAUI.GamesPage"
+             Title="GamesPage"
+             xmlns:viewmodel="clr-namespace:GameAppMAUI.ViewModels"
+>
+    <VerticalStackLayout>
+        <Button Text="Add new game" Command="{Binding CreateNewGameCommand}" />
+
+        <ListView ItemsSource="{Binding Games}" ItemTapped="OnSelectedGame" >
+            <ListView.Header>
+                <Grid Padding="10" ColumnSpacing="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Id" Grid.Column="0" HorizontalOptions="Start" FontAttributes="Bold"/>
+                    <Label Text="Rank" Grid.Column="1" HorizontalOptions="Start" FontAttributes="Bold"/>
+                    <Label Text="Title" Grid.Column="2" HorizontalOptions="Start" FontAttributes="Bold"/>
+                    <Label Text="Platform" Grid.Column="3" HorizontalOptions="Start" FontAttributes="Bold"/>
+                    <Label Text="Developer" Grid.Column="4" HorizontalOptions="Start" FontAttributes="Bold"/>
+                    <Label Text="ReleaseYear" Grid.Column="5" HorizontalOptions="Start" FontAttributes="Bold"/>
+                    <Label Text="Gen" Grid.Column="6" HorizontalOptions="Start" FontAttributes="Bold"/>
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10" ColumnSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="200"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Id}" Grid.Column="0" HorizontalOptions="Start"/>
+                            <Label Text="{Binding Rank}" Grid.Column="1" HorizontalOptions="Start"/>
+                            <Label Text="{Binding Title}" Grid.Column="2" HorizontalOptions="Start"/>
+                            <Label Text="{Binding Platform}" Grid.Column="3" HorizontalOptions="Start"/>
+                            <Label Text="{Binding Developer.Name}" Grid.Column="4" HorizontalOptions="Start"/>
+                            <Label Text="{Binding ReleaseYear}" Grid.Column="5" HorizontalOptions="Start"/>
+                            <Label Text="{Binding Gen}" Grid.Column="6" HorizontalOptions="Start" FontAttributes="Bold"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>

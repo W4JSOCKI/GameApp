@@ -1,4 +1,4 @@
-﻿using Wojtalak_Szczerkowski.GameApp.Core;
+﻿using GameApp.Core;
 using Wojtalak_Szczerkowski.GameApp.Interfaces;
 
 namespace Wojtalak_Szczerkowski.GameApp.DAOMock1.BO

@@ -20,89 +20,106 @@ namespace Wojtalak_Szczerkowski.GameApp.DAOSQLite
             db = new DataContext();
         }
 
-        public IEnumerable<IDeveloper> GetAllDevelopers()
-        {
-            return db.Developers;
-        }
-        public IDeveloper? GetDeveloper(int ID)
-        {
-            return db.Developers.FirstOrDefault(p => p.Id == ID);
-        }
-        public IDeveloper CreateNewDeveloper()
-        {
-            return new BO.Developer();
-        }
-        public IDeveloper? UpdateDeveloper(IDeveloper developer)
-        {
-            BO.Developer? dbProducer = developer as BO.Developer;
-            if (dbProducer == null)
-            {
-                System.Diagnostics.Debug.WriteLine("UpdateProducer: producer is not of type BO.Producer");
-                return null;
-            }
-            return db.Developers.Update(dbProducer).Entity;
-        }
-        public IDeveloper? RemoveDeveloper(int ID)
-        {
-            return db.Developers.Remove(db.Developers.Find(ID)).Entity;
-        }
-
-        public IDeveloper? AddDeveloper(IDeveloper developer)
-        {
-            BO.Developer? dbDeveloper = developer as BO.Developer;
-            if (dbDeveloper == null)
-            {
-                System.Diagnostics.Debug.WriteLine("AddDeveloper: developer is not of type BO.Developer");
-                return null;
-            }
-            return db.Developers.Add(dbDeveloper).Entity;
-        }
-
         public IEnumerable<IGame> GetAllGames()
         {
-            return db.Games.Include(b => b._developer);
-        }
-        public IGame? GetGame(int ID)
-        {
-            return db.Games.Include(b => b._developer).FirstOrDefault(b => b.Id == ID);
-        }
-        public IGame CreateNewGame()
-        {
-            return new BO.Game();
-        }
-        public IGame? UpdateGame(IGame game)
-        {
-            BO.Game? dbGame = game as BO.Game;
-            if (dbGame == null)
-            {
-                System.Diagnostics.Debug.WriteLine("UpdateGame: game is not of type BO.Game");
-                return null;
-            }
-            return db.Games.Update(dbGame).Entity;
-        }
-        public IGame? RemoveGame(int ID)
-        {
-            return db.Games.Remove(db.Games.Find(ID)).Entity;
+            return db.Games.Include(g => g._developer).ToList();
         }
 
-        public IGame? AddGame(IGame game)
+        public IEnumerable<IGame>GetGamesByTitle(string name)
         {
-            BO.Game? dbGame = game as BO.Game;
-            if (dbGame == null)
-            {
-                System.Diagnostics.Debug.WriteLine("AddBike: bike is not of type BO.Bike");
-                return null;
-            }
-            return db.Games.Add(dbGame).Entity;
+            return db.Games.Include(g => g._developer).Where(g => g.Title == name).ToList();
         }
 
-        public void SaveChanges()
+        public void AddGame(IGame game)
         {
+            var newId = (db.Games.Max(c => (int?)c.Id) ?? 0) + 1;
+            game.Id = newId;
+            var newGame = new BO.Game
+            {
+                Id = newId,
+                Rank = game.Rank,
+                Title = game.Title,
+                Platform = game.Platform,
+                ReleaseYear = game.ReleaseYear,
+                Gen = game.Gen,
+                _developer = (BO.Developer)GetDeveloper(game.Developer.Id), //NW CZY Z PODLOGA
+            };
+            db.Games.Add(newGame);
             db.SaveChanges();
         }
 
+        public IGame? GetGame(int ID)
+        {
+            return db.Games.Include(b => b._developer).FirstOrDefault(g => g.Id == ID);
+        }
 
+       
+        public void UpdateGame(IGame game)
+        {
+            var existingGame = db.Games.Find(game.Id);
+            if (existingGame != null)
+            {
+                db.Entry(existingGame).CurrentValues.SetValues(game);
+                db.SaveChanges();
+            }
+        }
 
+        public void DeleteGame(int ID)
+        {
+            var game = db.Games.Find(ID);
+            if (game != null)
+            {
+                db.Games.Remove(game);
+                db.SaveChanges();
+            }
+        }
+
+        public IEnumerable<IDeveloper> GetAllDevelopers()
+        {
+            return db.Developers.ToList();
+        }
+
+        public void AddDeveloper(IDeveloper developer)
+        {
+            var newId = (db.Developers.Max(d => (int?)d.Id) ?? 0) + 1;
+            developer.Id = newId;
+            var newDev = new BO.Developer
+            {
+                Id = newId,
+                Name = developer.Name,
+                Country = developer.Country
+            };
+
+            db.Developers.Add(newDev);
+            db.SaveChanges();
+        }
+
+        public IDeveloper? GetDeveloper(int ID)
+        {
+            return db.Developers.FirstOrDefault(d => d.Id == ID);
+        }
+
+        public void UpdateDeveloper(IDeveloper developer)
+        {
+            var existingDeveloper = db.Developers.Find(developer.Id);
+            if (existingDeveloper != null)
+            {
+                db.Entry(existingDeveloper).CurrentValues.SetValues(developer);
+                db.SaveChanges();
+            }
+        }
+
+  
+
+        public void DeleteDeveloper(int ID)
+        {
+            var developer = db.Developers.Find(ID);
+            if (developer != null)
+            {
+                db.Developers.Remove(developer);
+                db.SaveChanges();
+            }
+        }
 
     }
 }

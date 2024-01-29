@@ -9,44 +9,37 @@ namespace Wojtalak_Szczerkowski.GameApp.BLC
 {
     public class BLC
     {
-        private static readonly Lazy<BLC> instance = new Lazy<BLC>(() => new BLC());
 
-        private readonly IDAO dao;
+        private IDAO dao;
 
-        private BLC()
+        public BLC(string library)
         {
-            string libraryName = ConfigurationManager.AppSettings["DAOLibraryName"];
-            Assembly assembly = Assembly.UnsafeLoadFrom(libraryName);
-            Type typeToCreate = assembly.GetTypes().FirstOrDefault(t => typeof(IDAO).IsAssignableFrom(t));
-            dao = (IDAO)Activator.CreateInstance(typeToCreate ?? throw new InvalidOperationException("No suitable type found"));
+            Assembly assembly = Assembly.UnsafeLoadFrom(library);
+            Type typeToCreate = null;
+
+            foreach (Type type in assembly.GetTypes())
+            {
+                if (type.IsAssignableTo(typeof(IDAO)))
+                {
+                    typeToCreate = type;
+                    break;
+                }
+            }
+
+            dao = (IDAO)Activator.CreateInstance(typeToCreate, null);
         }
 
-        public static BLC GetInstance() => instance.Value;
+        public IEnumerable<IGame> GetAllGames() => dao.GetAllGames();
+        public IEnumerable<IGame> GetGamesByTitle(string name) => dao.GetGamesByTitle(name);
+        public void AddGame(IGame game) => dao.AddGame(game);
+        public IGame? GetGame(int gameID) => dao.GetGame(gameID);
+        public void UpdateGame(IGame game) => dao.UpdateGame(game);
+        public void DeleteGame(int gameID) => dao.DeleteGame(gameID);
 
-        public void SaveChanges() => dao.SaveChanges();
-
-        public IEnumerable<IDeveloper> GetDevelopers() => dao.GetAllDevelopers();
-
-        public IDeveloper? GetDeveloper(int ID) => dao.GetDeveloper(ID);
-
-        public IDeveloper CreateDeveloper() => dao.CreateNewDeveloper();
-
-        public IDeveloper? UpdateDeveloper(IDeveloper developer) => dao.UpdateDeveloper(developer);
-
-        public IDeveloper? RemoveDeveloper(int ID) => dao.RemoveDeveloper(ID);
-
-        public IDeveloper? AddDeveloper(IDeveloper developer) => dao.AddDeveloper(developer);
-
-        public IEnumerable<IGame> GetGames() => dao.GetAllGames();
-
-        public IGame? GetGame(int ID) => dao.GetGame(ID);
-
-        public IGame? RemoveGame(int ID) => dao.RemoveGame(ID);
-
-        public IGame CreateGame() => dao.CreateNewGame();
-
-        public IGame? UpdateGame(IGame game) => dao.UpdateGame(game);
-
-        public IGame? AddGame(IGame game) => dao.AddGame(game);
+        public IEnumerable<IDeveloper> GetAllDevelopers() => dao.GetAllDevelopers();
+        public void AddDeveloper(IDeveloper developer) => dao.AddDeveloper(developer);
+        public IDeveloper? GetDeveloper(int developerID) => dao.GetDeveloper(developerID);
+        public void UpdateDeveloper(IDeveloper developer) => dao.UpdateDeveloper(developer);
+        public void DeleteDeveloper(int developerID) => dao.DeleteDeveloper(developerID);
     }
 }

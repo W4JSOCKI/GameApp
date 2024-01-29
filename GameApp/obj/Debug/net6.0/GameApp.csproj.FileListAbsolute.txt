@@ -73,3 +73,4 @@ C:\Users\patry\source\repos\GameApp\GameApp\obj\Debug\net6.0\GameApp.genruntimec
 C:\Users\patry\source\repos\GameApp\GameApp\obj\Debug\net6.0\ref\GameApp.dll
 C:\Users\patry\source\repos\GameApp\GameApp\bin\Debug\net6.0\GameApp.dll.config
 C:\Users\patry\source\repos\GameApp\GameApp\bin\Debug\net6.0\GameApp.BLC.dll.config
+C:\Users\patry\source\repos\GameApp\GameApp\obj\Debug\net6.0\GameApp.sourcelink.json

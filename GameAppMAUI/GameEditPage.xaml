@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameAppMAUI.GameEditPage"
+             Title="GameEditPage">
+        <VerticalStackLayout>
+            <Grid Margin="0, 30" RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,Auto" >
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Title"/>
+                <Entry Grid.Row="1" Grid.Column="1" Text="{Binding GameEdit.Title}"/>
+
+                <Label Grid.Row="2" Grid.Column="0" Text="Type"/>
+                <Picker x:Name="ContainerTypePicker" Grid.Row="2" Grid.Column="1" ItemsSource="{Binding GameGenres}"
+                        SelectedIndex="{Binding GameEdit.Type, Mode=TwoWay, Converter={StaticResource GameConverter}}"></Picker>
+
+                <Label Grid.Row="3" Grid.Column="0" Text="Developer"/>
+                <Picker Grid.Row="3" Grid.Column="1"
+                    ItemsSource="{Binding DevelopersList}" ItemDisplayBinding="{Binding Title}"
+                    SelectedItem="{Binding GameEdit.Developer}" />
+
+                <Label Grid.Row="4" Grid.Column="0" Text="Production Year" ToolTipProperties.Text="{Binding Errors}"/>
+                <Entry Grid.Row="4" Grid.Column="1" Text="{Binding GameEdit.ReleaseYear}" />
+
+                <Label Grid.Row="5" Grid.Column="0" Text="Platform"/>
+                <Entry Grid.Row="5" Grid.Column="1" Text="{Binding GameEdit.Platform}"/>
+
+                <Label Grid.Row="6" Grid.Column="0" Text="Rank"/>
+                <Entry Grid.Row="6" Grid.Column="1" Text="{Binding GameEdit.Rank}"/>
+            </Grid>
+
+            <HorizontalStackLayout>
+                <Button Text="Save" Command="{Binding SaveGameCommand}"></Button>
+                <Button Text="Cancel" Command="{Binding CancelCommand}"></Button>
+                <Button Text="Delete" Command="{Binding DeleteGameCommand}"></Button>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+</ContentPage>
+
+

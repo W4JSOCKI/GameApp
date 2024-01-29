@@ -8,6 +8,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:GamesAppMaui.ViewModels.GamesCollectionViewModel.Games">
             <inheritdoc cref="F:GamesAppMaui.ViewModels.GamesCollectionViewModel.games"/>
@@ -44,6 +45,12 @@
         </member>
         <member name="P:GamesAppMaui.ViewModels.GamesCollectionViewModel.CreateNewGameCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GamesAppMaui.ViewModels.GamesCollectionViewModel.CreateNewGame"/>.</summary>
+        </member>
+        <member name="F:GamesAppMaui.ViewModels.GamesCollectionViewModel.saveGameCommand">
+            <summary>The backing field for <see cref="P:GamesAppMaui.ViewModels.GamesCollectionViewModel.SaveGameCommand"/>.</summary>
+        </member>
+        <member name="P:GamesAppMaui.ViewModels.GamesCollectionViewModel.SaveGameCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GamesAppMaui.ViewModels.GamesCollectionViewModel.SaveGame"/>.</summary>
         </member>
         <member name="T:GamesAppMaui.ViewModels.GameViewModel">
             <inheritdoc/>

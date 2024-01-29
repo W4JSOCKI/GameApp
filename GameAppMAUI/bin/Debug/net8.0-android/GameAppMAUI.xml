@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GameAppMAUI</name>
+    </assembly>
+    <members>
+        <member name="T:GameAppMAUI.ViewModels.DeveloperCollectionViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.Developers">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.developers"/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.DeveloperEdit">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.developerEdit"/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.IsEditing">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.isEditing"/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.IsAdding">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.isAdding"/>
+        </member>
+        <member name="F:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.createNewDeveloperCommand">
+            <summary>The backing field for <see cref="P:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.CreateNewDeveloperCommand"/>.</summary>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.CreateNewDeveloperCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.CreateNewDeveloper"/>.</summary>
+        </member>
+        <member name="F:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.saveDeveloperCommand">
+            <summary>The backing field for <see cref="P:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.SaveDeveloperCommand"/>.</summary>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.SaveDeveloperCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.SaveDeveloper"/>.</summary>
+        </member>
+        <member name="F:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.deleteDeveloperCommand">
+            <summary>The backing field for <see cref="P:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.DeleteDeveloperCommand"/>.</summary>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.DeleteDeveloperCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.DeleteDeveloper"/>.</summary>
+        </member>
+        <member name="T:GameAppMAUI.ViewModels.DeveloperViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.DeveloperViewModel.Id">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.DeveloperViewModel.id"/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.DeveloperViewModel.Name">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.DeveloperViewModel.name"/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.DeveloperViewModel.Country">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.DeveloperViewModel.country"/>
+        </member>
+        <member name="T:GameAppMAUI.ViewModels.GameCollectionViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GameCollectionViewModel.Games">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.GameCollectionViewModel.games"/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GameCollectionViewModel.GameEdit">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.GameCollectionViewModel.gameEdit"/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GameCollectionViewModel.IsEditing">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.GameCollectionViewModel.isEditing"/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GameCollectionViewModel.IsAdding">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.GameCollectionViewModel.isAdding"/>
+        </member>
+        <member name="F:GameAppMAUI.ViewModels.GameCollectionViewModel.createNewGameCommand">
+            <summary>The backing field for <see cref="P:GameAppMAUI.ViewModels.GameCollectionViewModel.CreateNewGameCommand"/>.</summary>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GameCollectionViewModel.CreateNewGameCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GameAppMAUI.ViewModels.GameCollectionViewModel.CreateNewGame"/>.</summary>
+        </member>
+        <member name="F:GameAppMAUI.ViewModels.GameCollectionViewModel.saveGameCommand">
+            <summary>The backing field for <see cref="P:GameAppMAUI.ViewModels.GameCollectionViewModel.SaveGameCommand"/>.</summary>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GameCollectionViewModel.SaveGameCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GameAppMAUI.ViewModels.GameCollectionViewModel.SaveGame"/>.</summary>
+        </member>
+        <member name="F:GameAppMAUI.ViewModels.GameCollectionViewModel.deleteGameCommand">
+            <summary>The backing field for <see cref="P:GameAppMAUI.ViewModels.GameCollectionViewModel.DeleteGameCommand"/>.</summary>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GameCollectionViewModel.DeleteGameCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GameAppMAUI.ViewModels.GameCollectionViewModel.DeleteGame"/>.</summary>
+        </member>
+        <member name="T:GameAppMAUI.ViewModels.GameViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GameViewModel.Id">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.GameViewModel.id"/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GameViewModel.Title">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.GameViewModel.title"/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GameViewModel.Rank">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.GameViewModel.rank"/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GameViewModel.Platform">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.GameViewModel.platform"/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GameViewModel.ReleaseYear">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.GameViewModel.releaseYear"/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GameViewModel.Developer">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.GameViewModel.developer"/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GameViewModel.Gen">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.GameViewModel.gen"/>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Developers">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Developers" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DeveloperEdit">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DeveloperEdit" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsEditing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsEditing" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsAdding">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsAdding" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Id">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Id" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Country">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Country" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Games">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Games" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.GameEdit">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "GameEdit" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Rank">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Rank" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Platform">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Platform" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ReleaseYear">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ReleaseYear" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Developer">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Developer" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Gen">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Gen" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Developers">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Developers" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DeveloperEdit">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DeveloperEdit" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsEditing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsEditing" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsAdding">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsAdding" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Id">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Id" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Country">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Country" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Games">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Games" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.GameEdit">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "GameEdit" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Rank">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Rank" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Platform">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Platform" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ReleaseYear">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ReleaseYear" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Developer">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Developer" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Gen">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Gen" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions">
+            <summary>
+            A helper type with generated validation stubs for types deriving from <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservableValidator"/>.
+            </summary>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="M:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions.CreateAllPropertiesValidator(GameAppMAUI.ViewModels.DeveloperViewModel)">
+            <summary>
+            Creates a validation stub for <see cref="T:GameAppMAUI.ViewModels.DeveloperViewModel"/> objects.
+            </summary>
+            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
+            <returns>A validation stub for <see cref="T:GameAppMAUI.ViewModels.DeveloperViewModel"/> objects.</returns>
+        </member>
+        <member name="M:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions.CreateAllPropertiesValidator(GameAppMAUI.ViewModels.GameViewModel)">
+            <summary>
+            Creates a validation stub for <see cref="T:GameAppMAUI.ViewModels.GameViewModel"/> objects.
+            </summary>
+            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
+            <returns>A validation stub for <see cref="T:GameAppMAUI.ViewModels.GameViewModel"/> objects.</returns>
+        </member>
+    </members>
+</doc>

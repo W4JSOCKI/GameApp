@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:viewmodel="clr-namespace:GamesAppMaui.ViewModels"
+             xmlns:core="clr-namespace:GameApp.Core;assembly=GameApp.Core"
+        
              
              x:Class="GamesAppMaui.GamesPage"
              Title="GamesPage">
@@ -43,13 +45,26 @@
         <Entry Grid.Row="3" Grid.Column="1" Text="{Binding Platform}"/>
 
         <Label Grid.Row="4" Grid.Column="0" Text="Genre"/>
-        <Entry Grid.Row="4" Grid.Column="1" Text="{Binding Genre}"/>
+            <Picker Grid.Row="4" Grid.Column="1" SelectedItem="{Binding SelectedGenre}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type core:Genre}">
+                        <core:Genre>RPG</core:Genre>
+                        <core:Genre>RTS</core:Genre>
+                        <core:Genre>SURVIVAL</core:Genre>
+                        <core:Genre>SIMULATOR</core:Genre>
+                        <core:Genre>MULTIPLAYER</core:Genre>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
 
-        <!--<Entry Grid.Row="4" Grid.Column="1" Text="{Binding Transmission}"/>-->
+            <!--<Entry Grid.Row="4" Grid.Column="1" Text="{Binding Transmission}"/>-->
 
         <Label Grid.Row="5" Grid.Column="0" Text="Release Year"/>
         <Entry Grid.Row="5" Grid.Column="1" Text="{Binding ReleaseYear}"/>
-    </Grid>
+
+            <Label Grid.Row="6" Grid.Column="0" Text="Developer"/>
+            <Entry Grid.Row="6" Grid.Column="1" Text="{Binding Developer}"/>
+        </Grid>
 
     
     

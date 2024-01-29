@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Wojtalak_Szczerkowski.GameApp.Core;
+using GameApp.Core;
 using Wojtalak_Szczerkowski.GameApp.Interfaces;
 using CommunityToolkit.Mvvm.ComponentModel;
+using System.ComponentModel;
 
 namespace GamesAppMaui.ViewModels
 {
-    public partial class GameViewModel : ObservableObject, IGame
+    public partial class GameViewModel : ObservableObject, IGame, INotifyPropertyChanged
     {
         [ObservableProperty]
         private int _id;
@@ -26,6 +27,29 @@ namespace GamesAppMaui.ViewModels
         [ObservableProperty]
         private IDeveloper? developer;
 
+        private Genre selectedGenre;
+
+        public Genre SelectedGenre
+        {
+            get { return selectedGenre; }
+            set
+            {
+                if (selectedGenre != value)
+                {
+                    selectedGenre = value;
+                    OnPropertyChanged(nameof(SelectedGenre));
+                }
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+
         public IReadOnlyList<string> AllGenres => Enum.GetNames(typeof(Genre)); 
 
         public GameViewModel(IGame game)
@@ -38,6 +62,8 @@ namespace GamesAppMaui.ViewModels
             Gen = game.Gen;
             Developer = game.Developer;
         }
+
+      
 
         public GameViewModel()
         {

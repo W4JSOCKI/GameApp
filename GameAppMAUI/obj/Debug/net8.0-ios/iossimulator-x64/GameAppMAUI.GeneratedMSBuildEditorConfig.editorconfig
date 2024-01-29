@@ -1,0 +1,77 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = GameAppMAUI
+build_property.ProjectDir = C:\Users\patry\source\repos\GameApp\GameAppMAUI\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[C:/Users/patry/source/repos/GameApp/GameAppMAUI/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GameAppMAUI.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/patry/source/repos/GameApp/GameAppMAUI/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GameAppMAUI.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/patry/source/repos/GameApp/GameAppMAUI/DeveloperAddPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GameAppMAUI.DeveloperAddPage.xaml
+build_metadata.AdditionalFiles.TargetPath = DeveloperAddPage.xaml
+build_metadata.AdditionalFiles.RelativePath = DeveloperAddPage.xaml
+
+[C:/Users/patry/source/repos/GameApp/GameAppMAUI/DeveloperEditPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GameAppMAUI.DeveloperEditPage.xaml
+build_metadata.AdditionalFiles.TargetPath = DeveloperEditPage.xaml
+build_metadata.AdditionalFiles.RelativePath = DeveloperEditPage.xaml
+
+[C:/Users/patry/source/repos/GameApp/GameAppMAUI/DevelopersPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GameAppMAUI.DevelopersPage.xaml
+build_metadata.AdditionalFiles.TargetPath = DevelopersPage.xaml
+build_metadata.AdditionalFiles.RelativePath = DevelopersPage.xaml
+
+[C:/Users/patry/source/repos/GameApp/GameAppMAUI/GameAddPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GameAppMAUI.GameAddPage.xaml
+build_metadata.AdditionalFiles.TargetPath = GameAddPage.xaml
+build_metadata.AdditionalFiles.RelativePath = GameAddPage.xaml
+
+[C:/Users/patry/source/repos/GameApp/GameAppMAUI/GameEditPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GameAppMAUI.GameEditPage.xaml
+build_metadata.AdditionalFiles.TargetPath = GameEditPage.xaml
+build_metadata.AdditionalFiles.RelativePath = GameEditPage.xaml
+
+[C:/Users/patry/source/repos/GameApp/GameAppMAUI/GamesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GameAppMAUI.GamesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = GamesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = GamesPage.xaml
+
+[C:/Users/patry/source/repos/GameApp/GameAppMAUI/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GameAppMAUI.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/patry/source/repos/GameApp/GameAppMAUI/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GameAppMAUI.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
