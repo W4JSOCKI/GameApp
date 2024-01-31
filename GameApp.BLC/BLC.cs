@@ -10,36 +10,47 @@ namespace Wojtalak_Szczerkowski.GameApp.BLC
     public class BLC
     {
 
-        private IDAO dao;
-
-        public BLC(string library)
+        private IDAO daoinerface;
+        public BLC(string libname)
         {
-            Assembly assembly = Assembly.UnsafeLoadFrom(library);
-            Type typeToCreate = null;
-
+            Assembly assembly = Assembly.UnsafeLoadFrom(libname);
+            Type ttc = null;
             foreach (Type type in assembly.GetTypes())
             {
                 if (type.IsAssignableTo(typeof(IDAO)))
                 {
-                    typeToCreate = type;
+                    ttc = type;
                     break;
                 }
             }
-
-            dao = (IDAO)Activator.CreateInstance(typeToCreate, null);
+            daoinerface = (IDAO)Activator.CreateInstance(ttc, null);
         }
 
-        public IEnumerable<IGame> GetAllGames() => dao.GetAllGames();
-        public IEnumerable<IGame> GetGamesByTitle(string name) => dao.GetGamesByTitle(name);
-        public void AddGame(IGame game) => dao.AddGame(game);
-        public IGame? GetGame(int gameID) => dao.GetGame(gameID);
-        public void UpdateGame(IGame game) => dao.UpdateGame(game);
-        public void DeleteGame(int gameID) => dao.DeleteGame(gameID);
+        public IGame? GetGame(int gameid)
+        {
+            return daoinerface.GetGame(gameid);
+        }
 
-        public IEnumerable<IDeveloper> GetAllDevelopers() => dao.GetAllDevelopers();
-        public void AddDeveloper(IDeveloper developer) => dao.AddDeveloper(developer);
-        public IDeveloper? GetDeveloper(int developerID) => dao.GetDeveloper(developerID);
-        public void UpdateDeveloper(IDeveloper developer) => dao.UpdateDeveloper(developer);
-        public void DeleteDeveloper(int developerID) => dao.DeleteDeveloper(developerID);
+        public void AddGame(IGame game) => daoinerface.AddGame(game);
+        public void ChangeGame(IGame game) => daoinerface.ChangeGame(game);
+        public void RemoveGame(int gameid) => daoinerface.RemoveGame(gameid);
+        public void AddDev(IDeveloper developer) => daoinerface.AddDev(developer);
+        public void ChangeDev(IDeveloper developer) => daoinerface.ChangeDev(developer);
+        public void RemoveDev(int developerid) => daoinerface.RemoveDev(developerid);
+
+        public IEnumerable<IGame> GetGames()
+        {
+            return daoinerface.GetGames();
+        }
+      
+        public IDeveloper? GetDev(int developerid)
+        {
+            return daoinerface.GetDev(developerid);
+        }
+
+        public IEnumerable<IDeveloper> GetDevs()
+        {
+            return daoinerface.GetDevs();
+        }
     }
 }

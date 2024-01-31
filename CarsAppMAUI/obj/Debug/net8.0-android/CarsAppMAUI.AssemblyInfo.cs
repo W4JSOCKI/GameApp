@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarsAppMAUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+23475611bf67c57989b3b5d6c624c91c62d666b9")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarsAppMAUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarsAppMAUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

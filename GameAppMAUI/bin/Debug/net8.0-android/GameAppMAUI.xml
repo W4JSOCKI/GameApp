@@ -4,89 +4,103 @@
         <name>GameAppMAUI</name>
     </assembly>
     <members>
-        <member name="T:GameAppMAUI.ViewModels.DeveloperCollectionViewModel">
+        <member name="T:GameAppMAUI.ViewModels.DevPageViewModel">
             <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
-        </member>
-        <member name="P:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.Developers">
-            <inheritdoc cref="F:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.developers"/>
-        </member>
-        <member name="P:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.DeveloperEdit">
-            <inheritdoc cref="F:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.developerEdit"/>
-        </member>
-        <member name="P:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.IsEditing">
-            <inheritdoc cref="F:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.isEditing"/>
-        </member>
-        <member name="P:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.IsAdding">
-            <inheritdoc cref="F:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.isAdding"/>
-        </member>
-        <member name="F:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.createNewDeveloperCommand">
-            <summary>The backing field for <see cref="P:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.CreateNewDeveloperCommand"/>.</summary>
-        </member>
-        <member name="P:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.CreateNewDeveloperCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.CreateNewDeveloper"/>.</summary>
-        </member>
-        <member name="F:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.saveDeveloperCommand">
-            <summary>The backing field for <see cref="P:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.SaveDeveloperCommand"/>.</summary>
-        </member>
-        <member name="P:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.SaveDeveloperCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.SaveDeveloper"/>.</summary>
-        </member>
-        <member name="F:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.deleteDeveloperCommand">
-            <summary>The backing field for <see cref="P:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.DeleteDeveloperCommand"/>.</summary>
-        </member>
-        <member name="P:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.DeleteDeveloperCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GameAppMAUI.ViewModels.DeveloperCollectionViewModel.DeleteDeveloper"/>.</summary>
-        </member>
-        <member name="T:GameAppMAUI.ViewModels.DeveloperViewModel">
-            <inheritdoc/>
-        </member>
-        <member name="P:GameAppMAUI.ViewModels.DeveloperViewModel.Id">
-            <inheritdoc cref="F:GameAppMAUI.ViewModels.DeveloperViewModel.id"/>
-        </member>
-        <member name="P:GameAppMAUI.ViewModels.DeveloperViewModel.Name">
-            <inheritdoc cref="F:GameAppMAUI.ViewModels.DeveloperViewModel.name"/>
-        </member>
-        <member name="P:GameAppMAUI.ViewModels.DeveloperViewModel.Country">
-            <inheritdoc cref="F:GameAppMAUI.ViewModels.DeveloperViewModel.country"/>
-        </member>
-        <member name="T:GameAppMAUI.ViewModels.GameCollectionViewModel">
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
         </member>
-        <member name="P:GameAppMAUI.ViewModels.GameCollectionViewModel.Games">
-            <inheritdoc cref="F:GameAppMAUI.ViewModels.GameCollectionViewModel.games"/>
+        <member name="P:GameAppMAUI.ViewModels.DevPageViewModel.Developers">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.DevPageViewModel.developers"/>
         </member>
-        <member name="P:GameAppMAUI.ViewModels.GameCollectionViewModel.GameEdit">
-            <inheritdoc cref="F:GameAppMAUI.ViewModels.GameCollectionViewModel.gameEdit"/>
+        <member name="P:GameAppMAUI.ViewModels.DevPageViewModel.DeveloperEdit">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.DevPageViewModel.developerEdit"/>
         </member>
-        <member name="P:GameAppMAUI.ViewModels.GameCollectionViewModel.IsEditing">
-            <inheritdoc cref="F:GameAppMAUI.ViewModels.GameCollectionViewModel.isEditing"/>
+        <member name="P:GameAppMAUI.ViewModels.DevPageViewModel.IsEditing">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.DevPageViewModel.isEditing"/>
         </member>
-        <member name="P:GameAppMAUI.ViewModels.GameCollectionViewModel.IsAdding">
-            <inheritdoc cref="F:GameAppMAUI.ViewModels.GameCollectionViewModel.isAdding"/>
+        <member name="P:GameAppMAUI.ViewModels.DevPageViewModel.IsAdding">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.DevPageViewModel.isAdding"/>
         </member>
-        <member name="F:GameAppMAUI.ViewModels.GameCollectionViewModel.createNewGameCommand">
-            <summary>The backing field for <see cref="P:GameAppMAUI.ViewModels.GameCollectionViewModel.CreateNewGameCommand"/>.</summary>
+        <member name="F:GameAppMAUI.ViewModels.DevPageViewModel.createDevCommand">
+            <summary>The backing field for <see cref="P:GameAppMAUI.ViewModels.DevPageViewModel.CreateDevCommand"/>.</summary>
         </member>
-        <member name="P:GameAppMAUI.ViewModels.GameCollectionViewModel.CreateNewGameCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GameAppMAUI.ViewModels.GameCollectionViewModel.CreateNewGame"/>.</summary>
+        <member name="P:GameAppMAUI.ViewModels.DevPageViewModel.CreateDevCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GameAppMAUI.ViewModels.DevPageViewModel.CreateDev"/>.</summary>
         </member>
-        <member name="F:GameAppMAUI.ViewModels.GameCollectionViewModel.saveGameCommand">
-            <summary>The backing field for <see cref="P:GameAppMAUI.ViewModels.GameCollectionViewModel.SaveGameCommand"/>.</summary>
+        <member name="F:GameAppMAUI.ViewModels.DevPageViewModel.filterGamesCommand">
+            <summary>The backing field for <see cref="P:GameAppMAUI.ViewModels.DevPageViewModel.FilterGamesCommand"/>.</summary>
         </member>
-        <member name="P:GameAppMAUI.ViewModels.GameCollectionViewModel.SaveGameCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GameAppMAUI.ViewModels.GameCollectionViewModel.SaveGame"/>.</summary>
+        <member name="P:GameAppMAUI.ViewModels.DevPageViewModel.FilterGamesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GameAppMAUI.ViewModels.DevPageViewModel.FilterGames"/>.</summary>
         </member>
-        <member name="F:GameAppMAUI.ViewModels.GameCollectionViewModel.deleteGameCommand">
-            <summary>The backing field for <see cref="P:GameAppMAUI.ViewModels.GameCollectionViewModel.DeleteGameCommand"/>.</summary>
+        <member name="F:GameAppMAUI.ViewModels.DevPageViewModel.saveDevCommand">
+            <summary>The backing field for <see cref="P:GameAppMAUI.ViewModels.DevPageViewModel.SaveDevCommand"/>.</summary>
         </member>
-        <member name="P:GameAppMAUI.ViewModels.GameCollectionViewModel.DeleteGameCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GameAppMAUI.ViewModels.GameCollectionViewModel.DeleteGame"/>.</summary>
+        <member name="P:GameAppMAUI.ViewModels.DevPageViewModel.SaveDevCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GameAppMAUI.ViewModels.DevPageViewModel.SaveDev"/>.</summary>
+        </member>
+        <member name="F:GameAppMAUI.ViewModels.DevPageViewModel.removeDevCommand">
+            <summary>The backing field for <see cref="P:GameAppMAUI.ViewModels.DevPageViewModel.RemoveDevCommand"/>.</summary>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.DevPageViewModel.RemoveDevCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GameAppMAUI.ViewModels.DevPageViewModel.RemoveDev"/>.</summary>
+        </member>
+        <member name="T:GameAppMAUI.ViewModels.DevViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.DevViewModel.Id">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.DevViewModel.id"/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.DevViewModel.Name">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.DevViewModel.name"/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.DevViewModel.Country">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.DevViewModel.country"/>
+        </member>
+        <member name="T:GameAppMAUI.ViewModels.GamePageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GamePageViewModel.Games">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.GamePageViewModel.games"/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GamePageViewModel.GameEdit">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.GamePageViewModel.gameEdit"/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GamePageViewModel.IsEditing">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.GamePageViewModel.isEditing"/>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GamePageViewModel.IsAdding">
+            <inheritdoc cref="F:GameAppMAUI.ViewModels.GamePageViewModel.isAdding"/>
+        </member>
+        <member name="F:GameAppMAUI.ViewModels.GamePageViewModel.filterGamesCommand">
+            <summary>The backing field for <see cref="P:GameAppMAUI.ViewModels.GamePageViewModel.FilterGamesCommand"/>.</summary>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GamePageViewModel.FilterGamesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GameAppMAUI.ViewModels.GamePageViewModel.FilterGames"/>.</summary>
+        </member>
+        <member name="F:GameAppMAUI.ViewModels.GamePageViewModel.createNewGameCommand">
+            <summary>The backing field for <see cref="P:GameAppMAUI.ViewModels.GamePageViewModel.CreateNewGameCommand"/>.</summary>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GamePageViewModel.CreateNewGameCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GameAppMAUI.ViewModels.GamePageViewModel.CreateNewGame"/>.</summary>
+        </member>
+        <member name="F:GameAppMAUI.ViewModels.GamePageViewModel.saveGameCommand">
+            <summary>The backing field for <see cref="P:GameAppMAUI.ViewModels.GamePageViewModel.SaveGameCommand"/>.</summary>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GamePageViewModel.SaveGameCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GameAppMAUI.ViewModels.GamePageViewModel.SaveGame"/>.</summary>
+        </member>
+        <member name="F:GameAppMAUI.ViewModels.GamePageViewModel.deleteGameCommand">
+            <summary>The backing field for <see cref="P:GameAppMAUI.ViewModels.GamePageViewModel.DeleteGameCommand"/>.</summary>
+        </member>
+        <member name="P:GameAppMAUI.ViewModels.GamePageViewModel.DeleteGameCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GameAppMAUI.ViewModels.GamePageViewModel.DeleteGame"/>.</summary>
         </member>
         <member name="T:GameAppMAUI.ViewModels.GameViewModel">
             <inheritdoc/>
@@ -221,12 +235,12 @@
             <inheritdoc/>
             <inheritdoc/>
         </member>
-        <member name="M:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions.CreateAllPropertiesValidator(GameAppMAUI.ViewModels.DeveloperViewModel)">
+        <member name="M:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions.CreateAllPropertiesValidator(GameAppMAUI.ViewModels.DevViewModel)">
             <summary>
-            Creates a validation stub for <see cref="T:GameAppMAUI.ViewModels.DeveloperViewModel"/> objects.
+            Creates a validation stub for <see cref="T:GameAppMAUI.ViewModels.DevViewModel"/> objects.
             </summary>
             <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
-            <returns>A validation stub for <see cref="T:GameAppMAUI.ViewModels.DeveloperViewModel"/> objects.</returns>
+            <returns>A validation stub for <see cref="T:GameAppMAUI.ViewModels.DevViewModel"/> objects.</returns>
         </member>
         <member name="M:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions.CreateAllPropertiesValidator(GameAppMAUI.ViewModels.GameViewModel)">
             <summary>

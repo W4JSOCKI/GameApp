@@ -14,8 +14,9 @@ namespace Wojtalak_Szczerkowski.GameApp.DAOSQLite.BO
         public Genre Gen { get; set; }
 
         public Developer _developer { get; set; }
-
-        IDeveloper IGame.Developer { get { return _developer; } set { _developer = (BO.Developer)value; } }
+        IDeveloper IGame.Developer { 
+            get {return _developer;}
+            set {_developer = (BO.Developer)value;}}
 
     }
 }

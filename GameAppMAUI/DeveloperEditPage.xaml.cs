@@ -3,7 +3,7 @@ namespace GameAppMAUI;
 
 public partial class DeveloperEditPage : ContentPage
 {
-	public DeveloperEditPage(DeveloperCollectionViewModel viewModel)
+	public DeveloperEditPage(DevPageViewModel viewModel)
 	{
 		InitializeComponent();
         BindingContext = viewModel;

@@ -3,16 +3,16 @@ namespace GameAppMAUI;
 
 public partial class DevelopersPage : ContentPage
 {
-    private readonly DeveloperCollectionViewModel _viewModel;
-    public DevelopersPage(DeveloperCollectionViewModel viewModel)
+    private readonly DevPageViewModel _viewModel;
+    public DevelopersPage(DevPageViewModel viewModel)
 	{
 		InitializeComponent();
         BindingContext = viewModel;
         _viewModel = viewModel;
     }
 
-    public void OnSelectedDeveloper(object sender, ItemTappedEventArgs args)
+    public void EditRedirect(object sender, ItemTappedEventArgs args)
     {
-        _viewModel.OnSelectedDeveloper(args);
+        _viewModel.EditRedirect(args);
     }
 }

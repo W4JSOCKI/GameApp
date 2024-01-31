@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameApp.DAOSQLite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc5f11afe5e0a6109e5c39fc68cfdb86344f61bc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23475611bf67c57989b3b5d6c624c91c62d666b9")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameApp.DAOSQLite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameApp.DAOSQLite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

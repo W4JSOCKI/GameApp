@@ -9,6 +9,10 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="Window">
+                <Setter Property="Width" Value="1600"/>
+                <Setter Property="Height" Value="600"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

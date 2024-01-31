@@ -8,16 +8,15 @@ namespace Wojtalak_Szczerkowski.GameApp.DAOSQLite
     {
         public string DbPath { get; }
 
-        public virtual DbSet<BO.Game> Games { get; set; }
-        public virtual DbSet<BO.Developer> Developers { get; set; }
+        public virtual DbSet<Game> Games { get; set; }
+        public virtual DbSet<Developer> Developers { get; set; }
 
         public DataContext()
         {
             var folder = Environment.SpecialFolder.LocalApplicationData;
             var path = Environment.GetFolderPath(folder);
-            DbPath = System.IO.Path.Join(path, "games.db");
+            DbPath = Path.Join(path, "games.db");
             DbPath = "C:\\db\\games.db";
-            System.Diagnostics.Debug.WriteLine($"SQLite database path: {DbPath}");
 
         }
 

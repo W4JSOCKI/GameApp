@@ -31,67 +31,53 @@ namespace Wojtalak_Szczerkowski.GameApp.DAOMock1
         };
         }
 
+
+        public IGame GetGame(int id)
+        {
+            return games.FirstOrDefault(g => g.Id == id);
+        }
         public void AddGame(IGame game)
         {
             games.Add(game);
         }
-
-        public void AddDeveloper(IDeveloper developer)
+        public void ChangeGame(IGame game)
         {
-            developers.Add(developer);
+            IGame selectedgame = games.FirstOrDefault(g => g.Id == game.Id);
         }
-
-        public IEnumerable<IGame> GetAllGames()
+        public void RemoveGame(int id)
+        {
+            IGame selectedgame = games.FirstOrDefault(b => b.Id == id);
+            games.Remove(selectedgame);
+        }
+        public IEnumerable<IGame> GetGames()
         {
             return games;
         }
-
-        public IEnumerable<IGame> GetGamesByTitle(string name)
+     
+        public IDeveloper GetDev(int id)
         {
-            return games.Where(g => g.Title == name);
+            return developers.FirstOrDefault(d => d.Id == id);
         }
-        public IEnumerable<IDeveloper> GetAllDevelopers()
+        public void AddDev(IDeveloper developer)
+        {
+            developers.Add(developer);
+        }
+        public void ChangeDev(IDeveloper developer)
+        {
+            IDeveloper selecteddev = developers.FirstOrDefault(p => p.Id == developer.Id);
+
+        }
+        public void RemoveDev(int id)
+        {   
+            IDeveloper? selecteddev = developers.FirstOrDefault(p => p.Id == id);
+            if (selecteddev != null)
+                developers.Remove(selecteddev);
+        }
+        public IEnumerable<IDeveloper> GetDevs()
         {
             return developers;
         }
 
-        public IGame? GetGame(int ID)
-        {
-            return games.FirstOrDefault(b => b.Id == ID);
-        }
-
-        public IDeveloper? GetDeveloper(int ID)
-        {
-            return developers.FirstOrDefault(p => p.Id == ID);
-        }
-
-        public void DeleteGame(int ID)
-        {
-            IGame? gameToRemove = games.FirstOrDefault(b => b.Id == ID);
-            if (gameToRemove != null)
-                games.Remove(gameToRemove);
-        }
-
-        public void DeleteDeveloper(int ID)
-        {
-            IDeveloper? developerToRemove = developers.FirstOrDefault(p => p.Id == ID);
-            if (developerToRemove != null)
-                developers.Remove(developerToRemove);
-        }
-
-        public void UpdateGame(IGame game)
-        {
-            IGame? gameToUpdate = games.FirstOrDefault(b => b.Id == game.Id);
-            
-                
-        }
-
-        public void UpdateDeveloper(IDeveloper developer)
-        {
-            IDeveloper? developerToUpdate = developers.FirstOrDefault(p => p.Id == developer.Id);
-            
-                
-        }
     }
 
 }

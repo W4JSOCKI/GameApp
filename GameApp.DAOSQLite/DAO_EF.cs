@@ -19,107 +19,84 @@ namespace Wojtalak_Szczerkowski.GameApp.DAOSQLite
         {
             db = new DataContext();
         }
-
-        public IEnumerable<IGame> GetAllGames()
+        public IGame GetGame(int id)
         {
-            return db.Games.Include(g => g._developer).ToList();
-        }
-
-        public IEnumerable<IGame>GetGamesByTitle(string name)
-        {
-            return db.Games.Include(g => g._developer).Where(g => g.Title == name).ToList();
+            return db.Games.Include(g => g._developer).FirstOrDefault(g => g.Id == id);
         }
 
         public void AddGame(IGame game)
         {
-            var newId = (db.Games.Max(c => (int?)c.Id) ?? 0) + 1;
-            game.Id = newId;
-            var newGame = new BO.Game
+            var nextid = (db.Games.Max(g => (int?)g.Id) ?? 0) + 1;
+            game.Id = nextid;
+            var newgame = new Game
             {
-                Id = newId,
+                Id = nextid,
                 Rank = game.Rank,
                 Title = game.Title,
                 Platform = game.Platform,
                 ReleaseYear = game.ReleaseYear,
                 Gen = game.Gen,
-                _developer = (BO.Developer)GetDeveloper(game.Developer.Id), //NW CZY Z PODLOGA
+                _developer = (Developer)GetDev(game.Developer.Id), 
             };
-            db.Games.Add(newGame);
+            db.Games.Add(newgame);
             db.SaveChanges();
         }
-
-        public IGame? GetGame(int ID)
+        public void ChangeGame(IGame game)
         {
-            return db.Games.Include(b => b._developer).FirstOrDefault(g => g.Id == ID);
+            var selectedgame = db.Games.Find(game.Id);
+            db.Entry(selectedgame).CurrentValues.SetValues(game);
+            db.SaveChanges();
+           
+        }
+        public void RemoveGame(int id)
+        {
+            var game = db.Games.Find(id);
+            db.Games.Remove(game);
+            db.SaveChanges();
+      
         }
 
-       
-        public void UpdateGame(IGame game)
+        public IEnumerable<IGame> GetGames()
         {
-            var existingGame = db.Games.Find(game.Id);
-            if (existingGame != null)
+            return db.Games.Include(g => g._developer).ToList();
+        }
+
+     
+        public IDeveloper? GetDev(int id)
+        {
+            return db.Developers.FirstOrDefault(d => d.Id == id);
+        }
+        public void AddDev(IDeveloper developer)
+        {
+            var nextid = (db.Developers.Max(d => (int?)d.Id) ?? 0) + 1;
+            developer.Id = nextid;
+            var newdev = new Developer
             {
-                db.Entry(existingGame).CurrentValues.SetValues(game);
-                db.SaveChanges();
-            }
-        }
-
-        public void DeleteGame(int ID)
-        {
-            var game = db.Games.Find(ID);
-            if (game != null)
-            {
-                db.Games.Remove(game);
-                db.SaveChanges();
-            }
-        }
-
-        public IEnumerable<IDeveloper> GetAllDevelopers()
-        {
-            return db.Developers.ToList();
-        }
-
-        public void AddDeveloper(IDeveloper developer)
-        {
-            var newId = (db.Developers.Max(d => (int?)d.Id) ?? 0) + 1;
-            developer.Id = newId;
-            var newDev = new BO.Developer
-            {
-                Id = newId,
+                Id = nextid,
                 Name = developer.Name,
                 Country = developer.Country
             };
 
-            db.Developers.Add(newDev);
+            db.Developers.Add(newdev);
             db.SaveChanges();
         }
 
-        public IDeveloper? GetDeveloper(int ID)
+        public void ChangeDev(IDeveloper developer)
         {
-            return db.Developers.FirstOrDefault(d => d.Id == ID);
+            var selecteddev = db.Developers.Find(developer.Id);  
+            db.Entry(selecteddev).CurrentValues.SetValues(developer);
+            db.SaveChanges();
+            
         }
-
-        public void UpdateDeveloper(IDeveloper developer)
+        public void RemoveDev(int id)
         {
-            var existingDeveloper = db.Developers.Find(developer.Id);
-            if (existingDeveloper != null)
-            {
-                db.Entry(existingDeveloper).CurrentValues.SetValues(developer);
-                db.SaveChanges();
-            }
+            var developer = db.Developers.Find(id);
+            db.Developers.Remove(developer);
+            db.SaveChanges();
         }
-
-  
-
-        public void DeleteDeveloper(int ID)
+        public IEnumerable<IDeveloper> GetDevs()
         {
-            var developer = db.Developers.Find(ID);
-            if (developer != null)
-            {
-                db.Developers.Remove(developer);
-                db.SaveChanges();
-            }
+            return db.Developers.ToList();
         }
-
     }
 }

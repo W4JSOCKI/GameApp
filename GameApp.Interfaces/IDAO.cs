@@ -10,27 +10,25 @@ namespace Wojtalak_Szczerkowski.GameApp.Interfaces
     public interface IDAO
     {
 
-
-        IEnumerable<IGame> GetAllGames();
-
-        IEnumerable<IGame> GetGamesByTitle(string name);
+        IGame? GetGame(int gameid);
 
         void AddGame(IGame game);
-        IGame? GetGame(int gameID);
-        void UpdateGame(IGame game);
-        void DeleteGame(int gameID);
+
+        void ChangeGame(IGame game);
+        void RemoveGame(int gameid);
+
+        IEnumerable<IGame> GetGames();
+
+
+
+        IDeveloper? GetDev(int developerid);
+
+        IEnumerable<IDeveloper> GetDevs();
         
+        void AddDev(IDeveloper developer);
+        void ChangeDev(IDeveloper developer);
 
-
-        IEnumerable<IDeveloper> GetAllDevelopers();
-        
-        void AddDeveloper(IDeveloper developer);
-
-        IDeveloper? GetDeveloper(int developerID);
-
-        void UpdateDeveloper(IDeveloper developer);
-
-        void DeleteDeveloper(int developerID);
+        void RemoveDev(int developerid);
 
       
     }

@@ -15,7 +15,6 @@ namespace Wojtalak_Szczerkowski.GameApp.Interfaces
         public string Platform { get; set; }
         public int ReleaseYear { get; set; }
         public IDeveloper Developer { get; set; }
-
         public Genre Gen { get; set; }
 
     }

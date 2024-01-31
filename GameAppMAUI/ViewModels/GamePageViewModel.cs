@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -12,57 +7,58 @@ using System.Globalization;
 using GameApp.Core;
 using Wojtalak_Szczerkowski.GameApp.Interfaces;
 using Wojtalak_Szczerkowski.GameApp.BLC;
-using IGame = Wojtalak_Szczerkowski.GameApp.Interfaces.IGame;
+
 
 
 namespace GameAppMAUI.ViewModels
 {
-    public partial class GameCollectionViewModel : ObservableObject, INotifyPropertyChanged
+    public partial class GamePageViewModel : ObservableObject, INotifyPropertyChanged
     {
-        private readonly BLC _blc;
-
+        private readonly BLC BLCinstance;
         [ObservableProperty]
         private ObservableCollection<IGame> games;
 
 
-        public GameCollectionViewModel(BLC blc)
+        private string filterText;
+        public string FilterText
         {
-            _blc = blc;
-            games = new ObservableCollection<IGame>();
-            foreach (IGame game in _blc.GetAllGames())
+            get => filterText;
+            set
             {
-                games.Add(new GameViewModel(game));
+                filterText = value;
+                FilterGames();
+                OnPropertyChanged(nameof(FilterText));
+            }
+        }
+
+        public GamePageViewModel(BLC blc)
+        {
+            BLCinstance = blc;
+            games = new ObservableCollection<IGame>();
+
+         
+
+            foreach (IGame game in BLCinstance.GetGames())
+            {
+                games.Add(new GameViewModel(game));   
             }
 
             CancelCommand = new Command(
-                execute: () =>
-                {
-                    GameEdit.PropertyChanged -= OnGameEditPropertyChanged;
-                    GameEdit = null;
-                    IsEditing = false;
-                    IsAdding = false;
-                    RefreshCanExecute();
-                    Shell.Current.GoToAsync("..");
-                },
-                canExecute: () =>
-                {
-                    return IsEditing || IsAdding;
-                });
-        }
-        public List<IDeveloper> DevelopersList
-        {
-            get
-            {
-                return _blc.GetAllDevelopers().ToList();
-            }
-        }
+             execute: () =>
+             {
+                 GameEdit.PropertyChanged -= OnGameEditPropertyChanged;
+                 GameEdit = null;
+                 IsEditing = false;
+                 IsAdding = false;
+                 RefreshCanExecute();
+                 Shell.Current.GoToAsync("..");
+             },
+             canExecute: () =>
+             {
+                 return IsEditing || IsAdding;
+             });
 
-        public List<string> GenreGames
-        {
-            get
-            {
-                return Enum.GetNames(typeof(Genre)).ToList();
-            }
+
         }
 
         [ObservableProperty]
@@ -78,10 +74,48 @@ namespace GameAppMAUI.ViewModels
             return !IsAdding;
         }
 
+        [RelayCommand]
+        public void FilterGames()
+        {
+            if (string.IsNullOrWhiteSpace(FilterText))
+            {
+                games.Clear();
+                foreach (IGame game in BLCinstance.GetGames())
+                {
+                    games.Add(new GameViewModel(game));
+                }
+            }
+            else
+            {
+                for (int i = games.Count - 1; i >= 0; i--)
+                {
+                    if (!games[i].Title.ToLower().Contains(FilterText.ToLower()))
+                    {
+                        games.RemoveAt(i);
+                    }
+                }
+            }
+        }
+
+        public List<IDeveloper> DevList
+        {
+            get
+            {
+                return BLCinstance.GetDevs().ToList();
+            }
+        }
+
+        public List<string> GenreGames
+        {
+            get {return Enum.GetNames(typeof(Genre)).ToList();}
+        }
+
+        
+
         [RelayCommand(CanExecute = nameof(CanCreateNewGame))]
         private void CreateNewGame()
         {
-            OnPropertyChanged(nameof(DevelopersList));
+            OnPropertyChanged(nameof(DevList));
             GameEdit = new GameViewModel();
             GameEdit.PropertyChanged += OnGameEditPropertyChanged;
             IsAdding = true;
@@ -94,13 +128,13 @@ namespace GameAppMAUI.ViewModels
         {
             if (IsAdding)
             {
-                _blc.AddGame(GameEdit);
+                BLCinstance.AddGame(GameEdit);
                 Games.Add(GameEdit);
                 IsAdding = false;
             }
             else if (IsEditing)
             {
-                _blc.UpdateGame(GameEdit);
+                BLCinstance.ChangeGame(GameEdit);
                 IsEditing = false;
             }
             GameEdit.PropertyChanged -= OnGameEditPropertyChanged;
@@ -112,10 +146,10 @@ namespace GameAppMAUI.ViewModels
         [RelayCommand]
         private void DeleteGame()
         {
-            IGame itemToRemove = Games.FirstOrDefault(c => c.Id == GameEdit.Id);
+            IGame itemToRemove = Games.FirstOrDefault(g => g.Id == GameEdit.Id);
             if (itemToRemove != null)
             {
-                _blc.DeleteGame(GameEdit.Id);
+                BLCinstance.RemoveGame(GameEdit.Id);
                 Games.Remove(itemToRemove);
             }
             GameEdit.PropertyChanged -= OnGameEditPropertyChanged;
@@ -129,14 +163,14 @@ namespace GameAppMAUI.ViewModels
         {
             return GameEdit != null &&
                    GameEdit.Title != null &&
-                   GameEdit.Title.Length > 1 &&
-                   GameEdit.ReleaseYear > 1900;
+                   GameEdit.Title.Length > 3 &&
+                   GameEdit.ReleaseYear > 1950;
         }
 
 
-        public void OnSelectedGame(ItemTappedEventArgs args)
+        public void EditRedirect(ItemTappedEventArgs args)
         {
-            OnPropertyChanged(nameof(DevelopersList));
+            OnPropertyChanged(nameof(DevList));
             GameEdit = args.Item as GameViewModel;
             GameEdit.PropertyChanged += OnGameEditPropertyChanged;
             IsEditing = true;
@@ -148,9 +182,8 @@ namespace GameAppMAUI.ViewModels
 
         private void RefreshCanExecute()
         {
-            //(CreateNewContainerCommand as Command)?.ChangeCanExecute();
+           
             CreateNewGameCommand.NotifyCanExecuteChanged();
-            //(SaveContainerCommand as Command)?.ChangeCanExecute();
             SaveGameCommand.NotifyCanExecuteChanged();
             (CancelCommand as Command)?.ChangeCanExecute();
         }

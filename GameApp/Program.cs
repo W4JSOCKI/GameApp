@@ -11,14 +11,14 @@ namespace Wojtalak_Szczerkowski.GameApp
 
             BLC.BLC blc = new BLC.BLC(ConfigurationManager.AppSettings["DAOLibraryName"]);
 
-           foreach (IDeveloper d in blc.GetAllDevelopers())
+           foreach (IDeveloper d in blc.GetDevs())
             {
                 Console.WriteLine($"{d.Name} : {d.Country}");
             }
 
             Console.WriteLine("------------------------------");
 
-            foreach (IGame g in blc.GetAllGames())
+            foreach (IGame g in blc.GetGames())
             {
                 Console.WriteLine($"{g.Id}: {g.Rank} {g.Title} {g.Platform} {g.ReleaseYear} {g.Gen} {g.Developer.Name}");
             }

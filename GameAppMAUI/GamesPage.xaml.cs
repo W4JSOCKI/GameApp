@@ -4,15 +4,15 @@ using GameAppMAUI.ViewModels;
 
 public partial class GamesPage : ContentPage
 {
-    private readonly GameCollectionViewModel _viewModel;
-    public GamesPage(GameCollectionViewModel viewModel)
+    private readonly GamePageViewModel _viewModel;
+    public GamesPage(GamePageViewModel viewModel)
 	{
         InitializeComponent();
         BindingContext = viewModel;
         _viewModel = viewModel;
     }
-    public void OnSelectedGame(object sender, ItemTappedEventArgs args)
+    public void EditRedirect(object sender, ItemTappedEventArgs args)
     {
-        _viewModel.OnSelectedGame(args);
+        _viewModel.EditRedirect(args);
     }
 }

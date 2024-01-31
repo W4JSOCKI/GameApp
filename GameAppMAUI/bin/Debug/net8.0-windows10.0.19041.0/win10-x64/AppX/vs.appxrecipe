@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\patry\source\repos\GameApp\GameAppMAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-01-29T16:37:26.319</Modified>
+      <Modified>2024-01-31T19:26:46.858</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\patry\source\repos\GameApp\GameAppMAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-01-29T16:37:23.211</Modified>
+      <Modified>2024-01-31T18:04:37.537</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\patry\source\repos\GameApp\GameAppMAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\GameAppMAUI.runtimeconfig.json">
       <PackagePath>GameAppMAUI.runtimeconfig.json</PackagePath>
@@ -43,15 +43,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\patry\source\repos\GameApp\GameAppMAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\GameAppMAUI.dll">
       <PackagePath>GameAppMAUI.dll</PackagePath>
-      <Modified>2024-01-29T16:37:21.618</Modified>
+      <Modified>2024-01-31T19:26:42.936</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\patry\source\repos\GameApp\GameAppMAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\GameAppMAUI.dll.config">
       <PackagePath>GameAppMAUI.dll.config</PackagePath>
-      <Modified>2024-01-29T16:36:01.734</Modified>
+      <Modified>2024-01-31T13:40:18.504</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\patry\source\repos\GameApp\GameAppMAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>GameAppMAUI.exe</PackagePath>
-      <Modified>2024-01-29T16:37:21.687</Modified>
+      <Modified>2024-01-31T19:26:43.112</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\patry\source\repos\GameApp\GameAppMAUI\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -291,7 +291,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\patry\source\repos\GameApp\GameAppMAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\GameAppMAUI.deps.json">
       <PackagePath>GameAppMAUI.deps.json</PackagePath>
-      <Modified>2024-01-29T15:18:32.725</Modified>
+      <Modified>2024-01-31T17:09:40.502</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\patry\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -659,7 +659,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\patry\source\repos\GameApp\GameApp.BLC\bin\Debug\net6.0\GameApp.BLC.dll">
       <PackagePath>GameApp.BLC.dll</PackagePath>
-      <Modified>2024-01-29T15:49:23.485</Modified>
+      <Modified>2024-01-31T17:06:23.647</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\patry\source\repos\GameApp\GameApp.Core\bin\Debug\net6.0\GameApp.Core.dll">
       <PackagePath>GameApp.Core.dll</PackagePath>
@@ -667,7 +667,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\patry\source\repos\GameApp\GameApp.Interfaces\bin\Debug\net6.0\GameApp.Interfaces.dll">
       <PackagePath>GameApp.Interfaces.dll</PackagePath>
-      <Modified>2024-01-29T12:32:12.568</Modified>
+      <Modified>2024-01-31T17:06:23.226</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\patry\source\repos\GameApp\GameApp.BLC\bin\Debug\net6.0\GameApp.BLC.dll.config">
       <PackagePath>GameApp.BLC.dll.config</PackagePath>

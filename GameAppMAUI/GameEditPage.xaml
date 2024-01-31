@@ -3,30 +3,61 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameAppMAUI.GameEditPage"
              Title="GameEditPage">
+
+<ContentPage.Resources>
+    <ResourceDictionary>
+
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="#333333"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#007bff"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Margin" Value="10,10,10,0"/>
+            <Setter Property="FontFamily">
+                <Setter.Value>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="System"/>
+                        <On Platform="Android" Value="sans-serif-medium"/>
+                        <On Platform="UWP" Value="Segoe MDL2 Assets"/>
+                    </OnPlatform>
+                </Setter.Value>
+            </Setter>
+        </Style>
+       
+    </ResourceDictionary>
+</ContentPage.Resources>
+
         <VerticalStackLayout>
-            <Grid Margin="0, 30" RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,Auto" >
+        <Grid Margin="0, 30" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,Auto,Auto" >
 
-                <Label Grid.Row="1" Grid.Column="0" Text="Title"/>
-                <Entry Grid.Row="1" Grid.Column="1" Text="{Binding GameEdit.Title}"/>
+            <Label Grid.Row="1" Grid.Column="0" Text="Title"/>
+            <Entry Grid.Row="1" Grid.Column="1" Text="{Binding GameEdit.Title}"/>
+            <!--<Label Grid.Row="1" Grid.Column="2" Text="{Binding Source={x:Reference GameCollectionViewModel}, Path=GameViewModel.Errors[Title]}" TextColor="Red" />-->
+            <Label Grid.Row="1" Grid.Column="2" Text="Min. 4 znaki"/>
+            <Label Grid.Row="2" Grid.Column="0" Text="Type"/>
+            <Picker x:Name="GenrePicker" Grid.Row="2" Grid.Column="1" ItemsSource="{Binding GenreGames}"
+                    SelectedIndex="{Binding GameEdit.Gen, Mode=TwoWay, Converter={StaticResource GameConverter}}"></Picker>
 
-                <Label Grid.Row="2" Grid.Column="0" Text="Type"/>
-                <Picker x:Name="ContainerTypePicker" Grid.Row="2" Grid.Column="1" ItemsSource="{Binding GameGenres}"
-                        SelectedIndex="{Binding GameEdit.Type, Mode=TwoWay, Converter={StaticResource GameConverter}}"></Picker>
+            <Label Grid.Row="3" Grid.Column="0" Text="Developer"/>
+            <Picker Grid.Row="3" Grid.Column="1"
+                ItemsSource="{Binding DevList}" ItemDisplayBinding="{Binding Name}"
+                SelectedItem="{Binding GameEdit.Developer}" />
+            
+            <Label Grid.Row="4" Grid.Column="0" Text="Release Year" ToolTipProperties.Text="{Binding Errors}"/>
+            <Entry Grid.Row="4" Grid.Column="1" Text="{Binding GameEdit.ReleaseYear}" />
+            <Label Grid.Row="4" Grid.Column="2" Text="Lata(1950-2024)"/>
 
-                <Label Grid.Row="3" Grid.Column="0" Text="Developer"/>
-                <Picker Grid.Row="3" Grid.Column="1"
-                    ItemsSource="{Binding DevelopersList}" ItemDisplayBinding="{Binding Title}"
-                    SelectedItem="{Binding GameEdit.Developer}" />
+            <Label Grid.Row="5" Grid.Column="0" Text="Platform"/>
+            <Entry Grid.Row="5" Grid.Column="1" Text="{Binding GameEdit.Platform}"/>
 
-                <Label Grid.Row="4" Grid.Column="0" Text="Production Year" ToolTipProperties.Text="{Binding Errors}"/>
-                <Entry Grid.Row="4" Grid.Column="1" Text="{Binding GameEdit.ReleaseYear}" />
-
-                <Label Grid.Row="5" Grid.Column="0" Text="Platform"/>
-                <Entry Grid.Row="5" Grid.Column="1" Text="{Binding GameEdit.Platform}"/>
-
-                <Label Grid.Row="6" Grid.Column="0" Text="Rank"/>
-                <Entry Grid.Row="6" Grid.Column="1" Text="{Binding GameEdit.Rank}"/>
-            </Grid>
+            <Label Grid.Row="6" Grid.Column="0" Text="Rank"/>
+            <Entry Grid.Row="6" Grid.Column="1" Text="{Binding GameEdit.Rank}"/>
+            <Label Grid.Row="6" Grid.Column="2" Text="Liczba większa od 1"/>
+        </Grid>
 
             <HorizontalStackLayout>
                 <Button Text="Save" Command="{Binding SaveGameCommand}"></Button>

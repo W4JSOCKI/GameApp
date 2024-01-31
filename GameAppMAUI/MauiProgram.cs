@@ -18,9 +18,9 @@ namespace GameAppMAUI
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-            builder.Services.AddSingleton<BLC>(provider => new BLC(ConfigurationManager.AppSettings["DAOLibraryName"]));
-            builder.Services.AddSingleton<GameCollectionViewModel>();
-            builder.Services.AddSingleton<DeveloperCollectionViewModel>();
+            builder.Services.AddSingleton(provider => new BLC(ConfigurationManager.AppSettings["DAOLibraryName"]));
+            builder.Services.AddSingleton<GamePageViewModel>();
+            builder.Services.AddSingleton<DevPageViewModel>();
 
             builder.Services.AddSingleton<GamesPage>();
             builder.Services.AddSingleton<DevelopersPage>();
